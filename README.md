@@ -74,6 +74,25 @@ O projeto Django segue o padrão de arquitetura **MVT (Model-View-Template)**, q
 
 - **Template (Modelo de Apresentação):** Representado pelo arquivo `index.html`. O Template é a camada de apresentação, definindo a estrutura visual da página web e como os dados fornecidos pela View devem ser exibidos.
 
+## Arquitetura MVT (Model-View-Template)
+
+Aqui está um diagrama ilustrando o fluxo da arquitetura MVT no nosso projeto Django:
+
+<img src="docs/diagrama_mvt.png" alt="Diagrama MVT" width="600">
+
+**Fluxo da Requisição e Resposta:**
+
+Quando um usuário acessa a página inicial:
+
+1.  O navegador envia uma **requisição** (indicada pelas setas verdes no diagrama).
+2.  O Django (através do `urls.py`) direciona essa requisição para a **View** correspondente (`views.py`).
+3.  A **View** pode interagir com o **Model** (`models.py`) para buscar os dados das mensagens do banco de dados.
+4.  A **View** então seleciona o **Template** (`index.html`) e passa os dados para ele.
+5.  O **Template** renderiza a página HTML final, incluindo os dados das mensagens.
+6.  O Django envia essa **resposta** HTML de volta para o navegador do usuário (indicada pelas setas amarelas no diagrama).
+
+O arquivo `urls.py` (tanto no nível do projeto `VozesDasCores/` quanto no nível do app `janeiro_branco/`) é responsável por mapear os endereços web (URLs) para as Views correspondentes.
+
 ### Autor 😊
 - **Gabriela Borges**
 - [Siga-me no Instagram!](https://www.instagram.com/gborges_19/)
