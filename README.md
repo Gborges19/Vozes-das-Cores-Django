@@ -1,5 +1,7 @@
 # 🚀 Vozes das Cores: Um Projeto de Saúde Mental com Django 🎉
 
+Projeto de Desenvolvimento web - vozes das cores https://pedagogianapraca.my.canva.site/janeirobranco
+
 ### Olá! Bem-vindo(a) ao Vozes das Cores! ✨
 
 Este é um projeto super especial, inspirado no movimento **Janeiro Branco**, que nos lembra da importância de cuidarmos da nossa saúde mental. O site é um espaço de luz onde as pessoas podem deixar mensagens de apoio, carinho e suas experiências positivas.
