@@ -1,0 +1,801 @@
+/*
+    -------------------------------------------
+    --- Estilos de Reestruturação para o Projeto ---
+    --- Gabriela Borges - Vozes das Cores ---
+    -------------------------------------------
+*/
+
+/*
+    --- 1. Importação da Fonte e Estilos Globais ---
+*/
+@font-face {
+    font-family: 'Glegoo Bold';
+    src: url('../fontes/Glegoo-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Fonte padrão para textos corridos */
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    background-color: #b4b4b4; /* Cor de fundo principal, um cinza claro */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Glegoo Bold', serif;
+    font-weight: normal; /* A fonte já é bold, então 'normal' funciona bem */
+    color: #4b4b4b; /* Cinza mais escuro para os títulos */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*
+    --- 2. Estilos da Faixa de Contatos (rolante) ---
+*/
+.faixa-contatos {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+/*
+    --- 3. Estilos do Topo e Menu ---
+*/
+.container-topo {
+    width: 100%;
+    background-color: #b4b4b4;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.topo {
+    text-align: center;
+    padding: 2px;
+}
+
+.header-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.laco-topo img {
+    height: 350px;   
+}
+
+.frase-topo img {
+    height: 250px;
+    margin-top: 150px;
+}
+
+.titulo-topo h1 {
+    font-size: 5em;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+
+.titulo-topo .janeiro {
+    color: #4b4b4b;
+}
+
+.titulo-topo .branco {
+    color: #f0f0f0; /* Um cinza bem claro, quase branco */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.subtitulo {
+    margin-top: 5px;
+    font-size: 2em;
+    color: #888;
+}
+
+/* --- Estilo da Faixa do Subtítulo --- */
+.faixa-subtitulo {
+    background-color: rgba(255, 255, 255, 0.20); /* Fundo branco com 20% de transparência */
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* --- Estilo da Imagem do Cérebro (GIF) --- */
+.cerebro-gif {
+    width: 250px; /* Ajuste o tamanho do GIF se precisar */
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .cerebro-gif {
+        width: 100px;
+    }
+}
+
+.menu-botoes {
+    display: flex;
+    flex-wrap: nowrap; /* <-- Alterado para nowrap para manter os botões em uma única linha */
+    justify-content: center;
+    gap: 11px;
+    margin-top: 30px;
+    white-space: nowrap; /* Garante que o texto dentro dos botões não quebre */
+}
+
+.botao-menu {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: 'Glegoo Bold', serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.botao-menu:hover {
+    background-color: #d1d1d1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/*
+    --- 4. Estilos das Seções de Conteúdo ---
+*/
+main {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/*
+    --- Estilo das Bolinhas Decorativas (Elemento Separado) ---
+*/
+.bolinhas {
+    text-align: left;
+    padding-top: 10px;
+}
+
+.bolinhas p {
+    color: #ffffff; /* Cor das bolinhas */
+    font-size: 1.5em;
+    letter-spacing: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Estilos da Seção "Por que Janeiro?" --- */
+
+#por-que-janeiro {
+    padding: 20px 0; /* Espaçamento superior e inferior */
+}
+
+/* Container do nosso layout de duas colunas */
+#por-que-janeiro .grid-2-colunas {
+    display: flex;
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between; /* Mantém as colunas separadas */
+    gap: 40px; /* Espaçamento entre as colunas */
+}
+
+/* Coluna do texto */
+#por-que-janeiro .coluna-texto {
+    flex-grow: 1; /* Ocupa todo o espaço disponível que a imagem não ocupa */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+#por-que-janeiro .coluna-texto h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+    margin: 0 0 30px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#por-que-janeiro .coluna-texto p {
+    font-size: 1.6em;
+    color: #1C1C1C;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Coluna da imagem */
+#por-que-janeiro .coluna-imagem {
+    /* Define uma largura máxima para a imagem, ou um tamanho fixo */
+    width: 270px;
+    flex-shrink: 0; /* Impede que a imagem encolha, mantendo seu tamanho */
+}
+
+#por-que-janeiro .coluna-imagem img {
+    width: 100%; /* A imagem preenche a largura da sua coluna */
+    height: auto;
+    display: block; /* Remove o espaço extra abaixo da imagem */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    #por-que-janeiro .grid-2-colunas {
+        flex-direction: column; /* Em telas pequenas, as colunas se empilham */
+    }
+
+    #por-que-janeiro .coluna-texto,
+    #por-que-janeiro .coluna-imagem {
+        width: 100%; /* Ocupam toda a largura */
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    #por-que-janeiro .coluna-texto h1 {
+        text-align: center;
+    }
+}
+
+/* --- Estilos da Seção "Importância e Cor" --- */
+#importancia-e-cor {
+    padding: 30px 0; /* Espaçamento superior e inferior */
+}
+
+/* Container do layout de duas colunas */
+#importancia-e-cor .grid-2-colunas {
+    display: flex;
+    justify-content: space-between; /* Espaço entre as colunas */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    gap: 80px; /* Espaçamento entre as colunas */
+    flex-wrap: wrap; /* Garante que as colunas se empilhem em telas menores */
+}
+
+/* Estilo para cada coluna de texto */
+#importancia-e-cor .coluna-de-texto {
+    flex-basis: calc(50% - 40px); /* Garante que cada coluna ocupe 50% do espaço, subtraindo metade do gap */
+    flex-grow: 1; /* Permite que as colunas se expandam para preencher o espaço */
+    text-align: left;
+}
+
+#importancia-e-cor .coluna-de-texto h2 {
+    font-size: 3em;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#importancia-e-cor .coluna-de-texto p {
+    font-size: 1.4em;
+    color: #1C1C1C;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Media Query para telas menores (opcional, mas recomendado) */
+@media (max-width: 768px) {
+    #importancia-e-cor .grid-2-colunas {
+        flex-direction: column; /* Em telas pequenas, as colunas se empilham */
+    }
+
+    #importancia-e-cor .coluna-de-texto {
+        flex-basis: 100%; /* Cada coluna ocupa a largura total */
+        margin-bottom: 30px; /* Adiciona espaçamento entre as colunas empilhadas */
+    }
+
+    #importancia-e-cor .coluna-de-texto:last-child {
+        margin-bottom: 0; /* Remove a margem da última coluna */
+    }
+}
+
+/* --- Estilos da Seção "Quebrando Tabus" --- */
+#quebrando-tabus {
+    padding: 15px 0;
+}
+
+#quebrando-tabus .titulo-secao {
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+#quebrando-tabus .grid-3-colunas {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que quebre em telas menores */
+}
+
+#quebrando-tabus .coluna-tabus {
+    flex-basis: calc(33% - 26.66px); /* Aproximadamente 1/3 do espaço, subtraindo uma parte do gap */
+    /* Removendo flex-grow para evitar que ocupem todo o espaço */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 250px;
+    text-align: center; /* Centraliza o texto dentro da caixa */
+}
+
+#quebrando-tabus .coluna-tabus .titulo-tabu {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #F40B27;
+    margin-bottom: 20px;
+}
+
+#quebrando-tabus .coluna-tabus p {
+    font-size: 1.1em;
+    color: #1C1C1C;
+    line-height: 1.6;
+}
+
+#quebrando-tabus .coluna-imagem-central {
+    flex-basis: auto; /* Ocupa apenas a largura da imagem */
+    flex-shrink: 0; /* Não permite que a imagem encolha */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quebrando-tabus .coluna-imagem-central img {
+    width: 250px; /* Ajustei o tamanho da imagem para caber melhor */
+    height: auto;
+}
+
+/* Media Query para telas menores (agora quebra em telas menores ainda) */
+@media (max-width: 768px) {
+    #quebrando-tabus .grid-3-colunas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #quebrando-tabus .coluna-tabus,
+    #quebrando-tabus .coluna-imagem-central {
+        width: 80%; /* Ocupam uma largura maior em telas menores */
+        max-width: none;
+        margin-bottom: 30px;
+    }
+    #quebrando-tabus .coluna-tabus {
+        text-align: center; /* Garante o texto centralizado quando empilhado */
+    }
+}
+
+/* --- Estilos da Seção "Dados e Estatísticas" --- */
+#dados-e-estatisticas {
+    padding: 20px 0;
+}
+
+#dados-e-estatisticas .titulo-estatisticas {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+#dados-e-estatisticas .estatisticas-layout-4-colunas {
+    display: flex; /* Habilita o Flexbox */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: stretch;
+    gap: 20px; /* Adiciona 20px de espaço entre cada item */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
+}
+
+#dados-e-estatisticas .quadro-estatistica {
+    flex-basis: calc(20% - 15px); /* Calcula a largura de cada item para 1/5 do espaço */
+    flex-grow: 1; /* Permite que os quadros cresçam para preencher o espaço disponível */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#dados-e-estatisticas .quadro-estatistica p {
+    font-size: 1.1em;
+    color: #1C1C1C;
+    line-height: 1.6;
+}
+
+/* Media Query para telas menores, fazendo com que as caixas se empilhem */
+@media (max-width: 992px) {
+    #dados-e-estatisticas .estatisticas-layout-4-colunas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #dados-e-estatisticas .quadro-estatistica {
+        width: 90%; /* Define a largura para telas menores */
+        margin-bottom: 20px;
+    }
+}
+
+/* --- Estilos da Seção "Como prevenir ou se ajudar?" --- */
+#como-prevenir {
+    padding: 20px 0;
+}
+
+#como-prevenir .titulo-secao {
+    text-align: center; /* Título alinhado ao centro */
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+#como-prevenir .listas-prevencao ul {
+    list-style: none; /* Remove as bolinhas padrão da lista */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#como-prevenir .listas-prevencao li {
+    position: relative; /* Essencial para posicionar a bolinha */
+    padding-left: 30px; /* Adiciona um espaço para a bolinha */
+    margin-bottom: 20px;
+}
+
+#como-prevenir .listas-prevencao li p {
+    font-size: 1.2em;
+    color: #1C1C1C;
+    line-height: 1.6;
+}
+
+/* Bolinha que pisca (usando o pseudo-elemento ::before) */
+#como-prevenir .listas-prevencao li::before {
+    content: ''; /* Conteúdo vazio para a bolinha */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #ff3366; /* Cor da bolinha, pode ser ajustada */
+    border-radius: 50%;
+    animation: blink 1.5s infinite; /* Aplica a animação "blink" */
+}
+
+/* Definição da animação de piscar */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Totalmente visível no início e no fim */
+    }
+    50% {
+        opacity: 0.2; /* Fica quase invisível na metade da animação */
+    }
+}
+
+/* --- Estilos da Seção "Onde buscar Ajuda" --- */
+#onde-buscar-ajuda {
+    padding: 20px 0;
+}
+
+#onde-buscar-ajuda .titulo-secao-centralizado {
+    text-align: center; /* Alinha o título no centro */
+    font-size: 2.5em;
+    color: #ffffff; /* Cor branca para o título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+    margin-bottom: 40px;
+}
+
+#onde-buscar-ajuda .grid-3-colunas-ajuda {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Garante que todas as caixas tenham a mesma altura */
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#onde-buscar-ajuda .caixa-ajuda {
+    flex-basis: calc(30% - 15px); /* Largura para as 4 colunas, ajustando o gap */
+    background-color: #f5f5f5; /* Cor de fundo cinza claro */
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#onde-buscar-ajuda .caixa-ajuda .titulo-caixa {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333333; /* Cor do título da caixa (cinza escuro) */
+    margin-bottom: 10px;
+}
+
+#onde-buscar-ajuda .caixa-ajuda p {
+    font-size: 1.1em;
+    color: #666666; /* Cor do texto da caixa (cinza médio) */
+    line-height: 1.6;
+}
+
+/* Media Query para responsividade em telas menores */
+@media (max-width: 768px) {
+    #onde-buscar-ajuda .grid-3-colunas-ajuda {
+        flex-direction: column;
+        align-items: center;
+    }
+    #onde-buscar-ajuda .caixa-ajuda {
+        flex-basis: 90%;
+        max-width: none;
+    }
+}
+
+/* --- Estilos da Seção "Quem sou eu?" --- */
+#quem-sou-eu {
+    padding: 20px 0;
+}
+
+#quem-sou-eu .titulo-secao-centralizado {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+#quem-sou-eu .texto-quem-sou-eu {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto; /* Centraliza o bloco de texto */
+    text-align: justify; /* Justifica o texto para um visual mais limpo */
+}
+
+#quem-sou-eu .texto-quem-sou-eu p {
+    font-size: 1.2em;
+    color: #1C1C1C; /* Cinza escuro, como solicitado */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/*
+/* Container principal para centralizar o conteúdo */
+.mensagens-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px; /* Adicione um padding para não colar nas bordas */
+}
+
+/* Estilo do formulário */
+.form-section {
+    margin-bottom: 50px;
+}
+
+.form-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+}
+
+/* Campos de entrada em linha */
+.form-fields {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os campos quebrem a linha em telas pequenas */
+    gap: 10px; /* Espaço entre os campos */
+    margin-bottom: 10px;
+}
+
+/* Estilo dos inputs */
+.form-fields input {
+    flex: 1; /* Permite que os inputs ocupem o espaço disponível */
+    min-width: 150px; /* Tamanho mínimo para não ficarem muito pequenos */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para a textarea da mensagem */
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+}
+
+/* Estilo para o botão de envio */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor azul do botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.submit-btn:hover {
+    background-color: #0056b3; /* Cor mais escura no hover */
+}
+
+/* Layout de grade para as mensagens */
+.mensagens-grid {
+    display: grid;
+    /* Cria colunas de 300px ou preenche o espaço disponível */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Espaço entre os blocos de mensagem */
+    margin-top: 20px;
+}
+
+/* Estilo de cada bloco de mensagem */
+.mensagem-bloco {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave para o efeito de "card" */
+}
+
+/* Estilo do nome, conteúdo e data */
+.mensagem-nome {
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.mensagem-conteudo {
+    margin: 0 0 10px 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+.mensagem-data {
+    font-size: 0.8em;
+    color: #888;
+    margin: 0;
+}
+/*
+    --- 7. Responsividade ---
+*/
+@media (max-width: 768px) {
+    .header-conteudo {
+        flex-direction: column;
+    }
+
+    .laco-topo img, .frase-topo img {
+        height: 80px;
+    }
+
+    .titulo-topo h1 {
+        font-size: 2.5em;
+    }
+
+    .menu-botoes {
+        flex-direction: column;
+    }
+
+    .grid-2-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-3-colunas-com-imagem {
+        grid-template-columns: 1fr;
+    }
+
+    .bloco-imagem {
+        order: 2; /* Move a imagem para o centro no layout mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* --- 8. Estilos do Botão Voltar ao Topo (Redondo) ---
+*/
+#botao-topo {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    width: 45px; /* Ajustei um pouco para um tamanho mais comum */
+    height: 45px;
+    border-radius: 50%;
+    font-size: 26px; /* Ajustei para ficar mais visível */
+    line-height: 45px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#botao-topo:hover {
+    background-color: #555;
+}
+
+/* Estilo geral para ambos os rodapés */
+.rodape {
+    color: #313131;            /* Escrita branca */
+    padding: 20px 0;        /* Espaçamento interno superior e inferior */
+    margin-top: 10px;       /* Adiciona um espaço para separar do conteúdo acima */
+}
+
+/* O container agora centraliza o conteúdo dentro do rodapé */
+.rodape .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px; /* Adiciona um padding nas laterais */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo específico para a lista de referências */
+.rodape-referencias h3 {
+   text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.rodape-referencias ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.rodape-referencias li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Estilo do rodapé de créditos */
+.rodape-creditos p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.rodape-creditos a {
+    color: #fff; /* Mantém a cor do link branca */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+}
+
+.rodape-creditos a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}

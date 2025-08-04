@@ -1,0 +1,12 @@
+# Ambientes virtuais
+venv/
+__pycache__/
+
+# Banco de dados local do Django
+db.sqlite3
+
+# Arquivos de cache e de compilação
+*.pyc
+*.log
+.DS_Store
+.vscode/

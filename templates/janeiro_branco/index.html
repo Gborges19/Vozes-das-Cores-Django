@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janeiro Branco - Vozes das Cores</title>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+
+    <div class="faixa-contatos">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            <span>
+                CVV: Atendimento 24h por telefone (188), chat ou presencial. &nbsp; | &nbsp;
+                CAPS: Atendimento especializado. &nbsp; | &nbsp;
+                COMPP: Centro de Orientação Médico Psicopedagógica. &nbsp; | &nbsp;
+                ISM: Instituto de Saúde Mental. &nbsp; | &nbsp;
+            </span>
+        </marquee>
+    </div>
+
+    <div class="container-topo">
+        <header class="topo">
+            <div class="header-conteudo">
+                <div class="laco-topo">
+                    <img src="{% static 'imagens/laco.svg' %}" alt="Laço da campanha">
+                </div>
+
+                <div class="titulo-topo">
+                    <h1><span class="janeiro">JANEIRO</span> <span class="branco">BRANCO</span></h1>
+                    <p class="subtitulo"><span class="faixa-subtitulo">Sua saúde mental em primeiro lugar.</span></p>
+                    <img src="{% static 'imagens/cerebroCentral.gif' %}" alt="Ícone de Cérebro" class="cerebro-gif">
+                </div>
+                
+                <div class="frase-topo">
+                    <img src="{% static 'imagens/fraseDeAjuda.svg' %}" alt="Laço da campanha">
+                </div>
+            </div>
+            
+            <nav class="menu-botoes">
+                <a href="#por-que-janeiro" class="botao-menu">Por que Janeiro?</a>
+                <a href="#importancia-e-cor" class="botao-menu">Importância</a>
+                <a href="#quebrando-tabus" class="botao-menu">Quebrando Tabus</a>
+                <a href="#dados-e-estatisticas" class="botao-menu">Estatísticas</a>
+                <a href="#como-prevenir" class="botao-menu">Ajuda</a>
+                <a href="#quem-sou-eu" class="botao-menu">Quem Sou Eu?</a>
+                <a href="#mensagens" class="botao-menu">Mensagens</a>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="bolinhas">
+             <p>● ● ● ● ● ● ● ● ● ● ● ● ● </p>
+        </div>
+            <section id="por-que-janeiro" class="secao-cinza">
+                <div class="container">
+                    <div class="grid-2-colunas">
+                        <div class="coluna-texto">
+                            <h1>Por que Janeiro?</h1>
+                            <p>O Janeiro Branco é uma campanha dedicada à conscientização sobre a importância da saúde mental e emocional. Seu principal objetivo é incentivar as pessoas a refletirem sobre suas vidas, emoções e relacionamentos, buscando bem-estar psicológico. O início do ano é visto como um período simbólico de “recomeços”, quando muitas pessoas estabelecem metas e repensam suas vidas. É um momento ideal para colocar a saúde mental na lista de prioridades.</p>
+                        </div>
+                        <div class="coluna-imagem">
+                            <img src="{% static 'imagens/mocalateral.svg' %}" alt="Moça refletindo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="importancia-e-cor" class="secao-cinza">
+                <div class="container">
+                    <div class="grid-2-colunas">
+                        <div class="coluna-de-texto">
+                            <h2>Qual a importância da causa?</h2>
+                            <p>Falar de saúde mental é fundamental para prevenir transtornos emocionais graves, como depressão, ansiedade e suicídio. Ainda existe muito tabu em torno do tema, o que faz com que muitas pessoas sofram em silêncio. A campanha Janeiro Branco ajuda a quebrar esse silêncio, promover o autocuidado e incentivar quem precisa a buscar ajuda.</p>
+                        </div>
+
+                        <div class="coluna-de-texto">
+                            <h2>Por que a cor branca representa essa campanha?</h2>
+                            <p>A cor branca simboliza uma folha em branco, pronta para ser preenchida com novas histórias, metas e sentimentos. Representa paz, serenidade e a chance de recomeçar. Assim, o branco foi escolhido para inspirar as pessoas a escreverem novos capítulos em suas vidas, incluindo o cuidado com a saúde mental.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <section id="quebrando-tabus" class="secao-cinza">
+            <div class="container">
+                <h1 class="titulo-secao">QUEBRANDO TABUS</h1>
+                <div class="grid-3-colunas">
+                    <div class="coluna-tabus">
+                        <h3 class="titulo-tabu">Cuidar da mente não é fraqueza</h3>
+                        <p>Muitas pessoas ainda acreditam que buscar ajuda psicológica é sinal de fraqueza ou loucura. Na verdade, é justamente o contrário: reconhecer que algo não vai bem e procurar apoio é um ato de coragem. Assim como cuidamos do corpo, precisamos cuidar da mente. Terapia, meditação, conversar com amigos ou profissionais não são vergonha — são saúde!</p>
+                    </div>
+
+                    <div class="coluna-imagem-central">
+                        <img src="{% static 'imagens/cerebrosozinho.svg' %}" alt="Ilustração de um cérebro">
+                    </div>
+
+                    <div class="coluna-tabus">
+                        <h3 class="titulo-tabu">Saúde mental é<br>para todos</h3>
+                        <p>Depressão, ansiedade, estresse... não escolhem idade, gênero ou classe social. Qualquer pessoa pode enfrentar dificuldades emocionais, mesmo aquelas que “parecem fortes” ou têm uma vida aparentemente perfeita. Falar sobre saúde mental sem medo é o primeiro passo para quebrar o tabu e ajudar mais gente a encontrar o caminho do bem-estar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dados-e-estatisticas" class="secao-cinza">
+            <div class="container">
+                <h1 class="titulo-estatisticas">Dados e Estatísticas</h1>
+                
+                <div class="estatisticas-layout-4-colunas">
+                    <div class="quadro-estatistica">
+                        <p>Segundo a Organização Mundial da Saúde (OMS), mais de 1 bilhão de pessoas no mundo vivem com algum transtorno mental.</p>
+                    </div>
+                    <div class="quadro-estatistica">
+                        <p>No Brasil, a depressão atinge cerca de 5,8% da população, e a ansiedade, 9,3% (OMS).</p>
+                    </div>
+                    <div class="quadro-estatistica">
+                        <p>Cerca de 86% das pessoas que tiram a própria vida não tinham tratamento adequado para transtornos mentais (dados ABP).</p>
+                    </div>
+                    <div class="quadro-estatistica">
+                        <p>O suicídio é a quarta causa de morte entre jovens de 15 a 29 anos no Brasil (OMS, 2023).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="como-prevenir" class="secao-cinza">
+            <div class="container">
+                <h1 class="titulo-secao">Como prevenir ou se ajudar?</h1>
+                <div class="listas-prevencao">
+                    <ul>
+                        <li>
+                            <p>Converse com amigos e familiares sobre seus sentimentos. O apoio social é fundamental.</p>
+                        </li>
+                        <li>
+                            <p>Busque ajuda profissional. Terapeutas e psicólogos podem oferecer as ferramentas necessárias.</p>
+                        </li>
+                        <li>
+                            <p>Pratique atividades físicas. Elas liberam endorfinas e melhoram o humor.</p>
+                        </li>
+                        <li>
+                            <p>Mantenha uma alimentação saudável. O que comemos afeta diretamente o nosso bem-estar mental.</p>
+                        </li>
+                        <li>
+                            <p>Dedique um tempo para hobbies e atividades que te tragam alegria e relaxamento.</p>
+                        </li>
+                        <li>
+                            <p>Evite o isolamento social. Participe de grupos e atividades em comunidade.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="onde-buscar-ajuda" class="secao-cinza">
+            <div class="container">
+                <h1 class="titulo-secao-centralizado">Onde buscar Ajuda:</h1>
+                
+                <div class="grid-3-colunas-ajuda">
+                    <div class="caixa-ajuda">
+                        <h3 class="titulo-caixa">CVV</h3>
+                        <p>Centro de Valorização da Vida: Fone: 188</p>
+                    </div>
+
+                    <div class="caixa-ajuda">
+                        <h3 class="titulo-caixa">CAPS</h3>
+                        <p>Centros de Atenção Psicossocial (rede pública)</p>
+                    </div>
+
+                    <div class="caixa-ajuda">
+                        <h3 class="titulo-caixa">Outros</h3>
+                        <p>Hospitais, clínicas, psicólogos ou psiquiatras.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quem-sou-eu" class="secao-cinza">
+            <div class="container">
+                <h1 class="titulo-secao-centralizado">Quem sou eu?</h1>
+                <div class="texto-quem-sou-eu">
+                    <p>Olá! Eu sou a Gabriela, criadora deste espaço dedicado à saúde mental e emocional. Sou paciente do CAPS (Centro de Atenção Psicossocial) e, como muitas pessoas, enfrento diariamente a luta contra a depressão. Sei, na pele, como é difícil carregar dores silenciosas e, às vezes, sentir-se sozinha no mundo. Criei este site inspirado na campanha Janeiro Branco, porque acredito que falar sobre saúde mental é um ato de coragem e amor — por nós mesmos e pelos outros. Aqui, quero oferecer informação, acolhimento e esperança a quem também está passando por momentos difíceis. Este não é apenas um site: é um convite para que você cuide de você, sem culpa, sem vergonha. Para lembrar que você não está sozinho(a) e que sempre há caminhos possíveis. Seja muito bem-vindo(a) a este espaço feito com carinho, verdade e empatia. 💛</p>
+                    <p>Com afeto, Gabriela</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mensagens" class="secao-cinza">
+            <div class="mensagens-container">
+                <div class="form-section">
+                    <h2>Deixe sua mensagem de apoio:</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="form-fields">
+                            {{ form.nome }}
+                            {{ form.email }}
+                            {{ form.telefone }}
+                        </div>
+                        {{ form.mensagem }}
+                        <br>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <hr>
+                <div class="mensagens-grid">
+                    {% for msg in mensagens %}
+                    <div class="mensagem-bloco">
+                        <p class="mensagem-nome"><strong>{{ msg.nome }}</strong></p>
+                        <p class="mensagem-conteudo">{{ msg.mensagem }}</p>
+                        <p class="mensagem-data">{{ msg.data_envio|date:"d/m/Y H:i" }}</p>
+                    </div>
+                    {% empty %}
+                    <p>Nenhuma mensagem de apoio foi deixada ainda.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <div class="container-rodape">
+        <footer class="rodape rodape-referencias">
+    <div class="container">
+        <h3>Referências:</h3>
+        <ul>
+            <li>Organização Mundial da Saúde (OMS) – Relatórios de Saúde Mental 2023</li>
+            <li>Associação Brasileira de Psiquiatria (ABP) – Janeiro Branco</li>
+            <li>Ministério da Saúde – Dados sobre transtornos mentais no Brasil</li>
+            <li>CVV – Centro de Valorização da Vida</li>
+        </ul>
+    </div>
+</footer>
+
+<footer class="rodape rodape-creditos">
+    <div class="container">
+        <p>&copy; 2025 Direitos Reservados - Desenvolvido por <a href="https://www.instagram.com/gborges_19/" target="_blank">Gabriela Borges</a>.</p>
+    </div>
+            <a href="#" id="botao-topo" title="Voltar ao Topo">^</a>
+        </footer>
+    </div>
+        <script>
+        // Pega o botão
+        let meuBotao = document.getElementById("botao-topo");
+
+        // Quando o usuário rola 25px para baixo, mostra o botão
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                meuBotao.style.display = "block";
+            } else {
+                meuBotao.style.display = "none";
+            }
+        }
+        </script>
+        </body>
+</html>
+{% comment %}
+    Este é um modelo HTML para a campanha Janeiro Branco, que visa promover a saúde mental e emocional.
+    O conteúdo inclui informações sobre a importância da causa, dados estatísticos, formas de ajudar e uma seção para mensagens.
+    O design é responsivo e utiliza classes CSS para estilização.
+{% endcomment %}
