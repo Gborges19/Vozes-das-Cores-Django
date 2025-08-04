@@ -1,12 +1,13 @@
 # 🚀 Vozes das Cores: Um Projeto de Saúde Mental com Django 🎉
 
+### Templete Esboço.
+
 Projeto de Desenvolvimento web - vozes das cores https://pedagogianapraca.my.canva.site/janeirobranco
 
-### Olá! Bem-vindo(a) ao Vozes das Cores! ✨
+### Descrição do Projeto
+Este é um projeto de desenvolvimento web, inspirado no movimento **Janeiro Branco**, que tem como objetivo conscientizar sobre a importância da saúde mental. O site conta com um mural de mensagens onde os usuários podem deixar mensagens de apoio e suas experiências de forma positiva.
 
-Este é um projeto super especial, inspirado no movimento **Janeiro Branco**, que nos lembra da importância de cuidarmos da nossa saúde mental. O site é um espaço de luz onde as pessoas podem deixar mensagens de apoio, carinho e suas experiências positivas.
-
-Construído com muito carinho para a disciplina de Desenvolvimento Web, este projeto é uma prova de que a tecnologia pode ser usada para espalhar o bem!
+O projeto foi desenvolvido como um requisito para a disciplina de Desenvolvimento Web e utiliza o framework Django.
 
 ### Funcionalidades do Projeto
 
@@ -22,15 +23,11 @@ Construído com muito carinho para a disciplina de Desenvolvimento Web, este pro
 - **SQLite3**: Nosso banco de dados para guardar todas as mensagens especiais.
 - **Git/GitHub**: Para o controle de versão e para você poder ver todo o código!
 
----
-
 ### **Acesse o Site Online! 🔗**
 
 A melhor parte é que o site já está no ar! Você pode ver o resultado final clicando aqui:
 
 [**https://Gborges19.pythonanywhere.com/**](https://Gborges19.pythonanywhere.com/)
-
----
 
 ### **Quer Rodar o Projeto Localmente?** 🏃‍♀️
 
@@ -67,37 +64,16 @@ Se quiser rodar o projeto na sua máquina e fazer suas próprias mudanças, siga
     ```
     E pronto! O site estará no ar em `http://127.0.0.1:8000/`.
 
-### Estrutura do Projeto
+### Explicação do MVT
 
-\`\`\`
-.
-├── Vozes-das-Cores/
-│   ├── .gitignore
-│   ├── db.sqlite3
-│   ├── manage.py
-│   ├── requirements.txt
-│   ├── venv/
-│   ├── janeiro_branco/
-│   │   ├── migrations/
-│   │   ├── static/
-│   │   ├── templates/
-│   │   │   └── janeiro_branco/
-│   │   │       └── index.html
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── forms.py
-│   │   ├── models.py
-│   │   ├── urls.py
-│   │   └── views.py
-│   └── VozesDasCores/
-│       ├── __init__.py
-│       ├── asgi.py
-│       ├── settings.py
-│       ├── urls.py
-│       └── wsgi.py
-└── README.md
-\`\`\`
+O projeto Django segue o padrão de arquitetura **MVT (Model-View-Template)**, que organiza o código da seguinte forma:
 
-### Autora 😊
+- **Model (Modelo):** Representado pelo arquivo `models.py`. O Model é responsável por gerenciar os dados do site, definindo a estrutura das informações que são armazenadas no banco de dados (SQLite). No caso, a classe `MensagemDeApoio` é o Model.
+
+- **View (Visão):** Representado pelo arquivo `views.py`. A View contém a lógica de negócios da nossa aplicação. Ela recebe as requisições do usuário, interage com o Model para buscar ou salvar dados e, em seguida, decide qual Template deve ser renderizado para exibir a resposta. A função `home` é a principal View.
+
+- **Template (Modelo de Apresentação):** Representado pelo arquivo `index.html`. O Template é a camada de apresentação, definindo a estrutura visual da página web e como os dados fornecidos pela View devem ser exibidos.
+
+### Autor 😊
 - **Gabriela Borges**
 - [Siga-me no Instagram!](https://www.instagram.com/gborges_19/)
