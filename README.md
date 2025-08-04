@@ -9,10 +9,11 @@ Este é um projeto super especial, inspirado no movimento **Janeiro Branco**, qu
 Construído com muito carinho para a disciplina de Desenvolvimento Web, este projeto é uma prova de que a tecnologia pode ser usada para espalhar o bem!
 
 ### Funcionalidades do Projeto
-✅ **Mural de Mensagens**: Um espaço lindo e dinâmico onde as vozes dos usuários ganham vida.
-💬 **Formulário Completo**: Um formulário fácil de usar para enviar nome, e-mail, telefone e, claro, a sua mensagem!
-🎨 **Design Responsivo**: As mensagens aparecem em blocos de até 3 quadros, perfeitos para qualquer tela.
-🔒 **Dados Seguros**: Seus dados de contato (e-mail e telefone) são guardados com carinho no banco de dados, mas não são exibidos publicamente.
+
+- ✅ **Mural de Mensagens**: Um espaço lindo e dinâmico onde as vozes dos usuários ganham vida.
+- 💬 **Formulário Completo**: Um formulário fácil de usar para enviar nome, e-mail, telefone e, claro, a sua mensagem!
+- 🎨 **Design Responsivo**: As mensagens aparecem em blocos de até 3 quadros, perfeitos para qualquer tela.
+- 🔒 **Dados Seguros**: Seus dados de contato (e-mail e telefone) são guardados com carinho no banco de dados, mas não são exibidos publicamente.
 
 ### Tecnologias Utilizadas
 - **Python** 🐍: O coração do projeto.
@@ -65,6 +66,37 @@ Se quiser rodar o projeto na sua máquina e fazer suas próprias mudanças, siga
     python manage.py runserver
     ```
     E pronto! O site estará no ar em `http://127.0.0.1:8000/`.
+
+### Estrutura do Projeto
+
+\`\`\`
+.
+├── Vozes-das-Cores/
+│   ├── .gitignore
+│   ├── db.sqlite3
+│   ├── manage.py
+│   ├── requirements.txt
+│   ├── venv/
+│   ├── janeiro_branco/
+│   │   ├── migrations/
+│   │   ├── static/
+│   │   ├── templates/
+│   │   │   └── janeiro_branco/
+│   │   │       └── index.html
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   └── VozesDasCores/
+│       ├── __init__.py
+│       ├── asgi.py
+│       ├── settings.py
+│       ├── urls.py
+│       └── wsgi.py
+└── README.md
+\`\`\`
 
 ### Autora 😊
 - **Gabriela Borges**
